@@ -9,6 +9,12 @@
         body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
         .navbar { background-color: #003366 !important; }
         footer { background-color: #003366; color: white; text-align: center; padding: 1rem; }
+        /* Show dropdown on hover */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
     </style>
 </head>
 <body>
@@ -22,7 +28,22 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle active"
+   href="services.html"
+   id="servicesDropdown"
+   role="button"
+   data-bs-toggle="dropdown">
+   Services
+</a>
+
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Regulatory Audits</a></li>
+        <li><a class="dropdown-item" href="#">Training Programs</a></li>
+        <li><a class="dropdown-item" href="#">Consulting</a></li>
+    </ul>
+</li>
+
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
