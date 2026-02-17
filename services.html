@@ -14,7 +14,10 @@
     display: block;
     margin-top: 0;
 }
-
+/* Optional: keep arrow visible without clicking */
+.navbar .dropdown-toggle::after {
+    display: inline-block;
+}
     </style>
 </head>
 <body>
@@ -29,11 +32,16 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item dropdown">
-   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle active" href="services.html" id="servicesDropdown" role="button">
+    <a class="nav-link dropdown-toggle"
+       href="services.html"
+       id="servicesDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       aria-expanded="false">
         Services
     </a>
-    <ul class="dropdown-menu">
+
+    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
         <li><a class="dropdown-item" href="#">Regulatory Audits</a></li>
         <li><a class="dropdown-item" href="#">Training Programs</a></li>
         <li><a class="dropdown-item" href="#">Consulting</a></li>
