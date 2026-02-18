@@ -29,6 +29,11 @@
         .hero h1 { font-size: 2.5rem; }
 
         .navbar { background-color: #003366 !important; }
+        .navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
         .btn-primary {
             background-color: #004080;
@@ -71,7 +76,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse navbar-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
